@@ -1,7 +1,6 @@
 package ethereum
 
 import (
-	"fmt"
 	"github.com/button-tech/hackathon-eth-denver/rhombus/ethereum/contract"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
@@ -52,7 +51,6 @@ func GetRate(currency string) (float64)  {
 		return 0
 	}
 
-	fmt.Println(version)
 	var result float64
 	if reverse {
 		f, err := strconv.ParseFloat(version.V.String(), 64)
